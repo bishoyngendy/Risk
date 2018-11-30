@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+<ScrollPane fx:controller="controllers.LoggingController"
+            prefWidth="250" prefHeight="500"
+            xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1">
+    <VBox fx:id="vbox">
+        <padding>
+            <Insets left="5" right="5" top="5" bottom="5"/>
+        </padding>
+    </VBox>
+</ScrollPane>

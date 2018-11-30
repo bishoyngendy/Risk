@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.MainController" fx:id="borderPane">
+    <center>
+        <fx:include source="GraphArea.fxml" fx:id="graphArea" />
+    </center>
+    <top>
+        <fx:include source="GameStart.fxml" fx:id="gameStart" />
+    </top>
+    <right>
+        <fx:include source="Logging.fxml" fx:id="logging" />
+    </right>
+    <bottom>
+        <fx:include source="GameActions.fxml" fx:id="gameActions"/>
+    </bottom>
+</BorderPane>

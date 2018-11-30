@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<StackPane prefHeight="50.0" BorderPane.alignment="CENTER"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controllers.GameStartController">
+    <GridPane alignment="center" hgap="10" vgap="10">
+        <padding>
+            <Insets top="5" bottom="5"/>
+        </padding>
+        <Label text="First Agent:"
+               GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+
+        <ComboBox fx:id="firstAgentComboBox"
+                  GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+        <Label text="Second Agent:"
+               GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+
+        <ComboBox fx:id="secondAgentComboBox"
+                  GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+
+        <Button text="Start Game" onMouseClicked="#startGame"
+                GridPane.columnIndex="4" GridPane.rowIndex="0"/>
+    </GridPane>
+</StackPane>

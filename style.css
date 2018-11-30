@@ -1,0 +1,17 @@
+node {
+	fill-mode: dyn-plain;
+	fill-color: red, blue, green, magenta, orange, cyan, yellow, pink;
+	stroke-mode: plain;
+	stroke-color: black;
+	text-color: black;
+    text-size: 30;
+    text-alignment: above;
+}
+node.one {
+    size: 30px, 30px;
+    shape: circle;
+}
+node.two{
+    size: 30px, 30px;
+    shape: cross;
+}

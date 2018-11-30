@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+<StackPane prefHeight="105.0" prefWidth="631.0" BorderPane.alignment="CENTER"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="controllers.GameActionsController">
+    <GridPane alignment="center" hgap="10" fx:id="bonusDialogue">
+        <Text textAlignment="CENTER" fx:id="playerTurnTextInBonus"
+              GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <Text fx:id="bonusTitle"
+              GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <GridPane alignment="center" hgap="10" vgap="10"
+                  GridPane.columnIndex="0" GridPane.rowIndex="2">
+            <padding>
+                <Insets top="5" bottom="5"/>
+            </padding>
+            <Label text="Add themTo: "
+                   GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <ComboBox fx:id="bonusVerticesOptions"
+                      GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+            <Button text="Add Armies" onMouseClicked="#addBonusArmies"
+                    GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+        </GridPane>
+    </GridPane>
+    <GridPane alignment="center" hgap="10" vgap="10" fx:id="willAttackDialogue">
+        <padding>
+            <Insets top="5" bottom="5"/>
+        </padding>
+        <Text textAlignment="CENTER" fx:id="playerTurnTextInWillAttack"
+              GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <Text text="Will You Attack?" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <Button text="Yes" onMouseClicked="#willAttack" fx:id="willAttackButton"
+                GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Button text="No" onMouseClicked="#willNotAttack"
+                GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+    </GridPane>
+    <GridPane alignment="center" hgap="10" vgap="10" fx:id="attackingDialogue">
+        <padding>
+            <Insets top="5" bottom="5"/>
+        </padding>
+        <Text textAlignment="CENTER" fx:id="playerTurnTextInAttacking"
+              GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <Text text="Attacking Vertex" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <ComboBox fx:id="attackingVertexComboBox" onAction="#changeAttackingVertex"
+                  GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+
+        <Text text="Attacked Vertex" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <ComboBox fx:id="attackedVertexComboBox" onAction="#changeAttackedVertex"
+                  GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+        <Text text="Armies To Transfer" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+        <TextField fx:id="transferredArmiesTextField"
+                GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+
+        <Button text="Attack" onMouseClicked="#attack"
+                GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+    </GridPane>
+    <GridPane alignment="center" hgap="10" vgap="10" fx:id="computerPlayingDialogue">
+        <Text textAlignment="CENTER" fx:id="playerTurnTextInComputer"
+              GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    </GridPane>
+</StackPane>
